@@ -8,9 +8,10 @@ public class ConnectionFactory {
 
     public Connection getConnection() {
         try {
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost/banco", "root", "123");
+            Connection conexao =
+                    DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "usuario", "senha");
 
-            return c;
+            return conexao;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
