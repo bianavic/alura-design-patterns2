@@ -9,7 +9,7 @@ public class Programa {
 
     public static void main(String[] args) throws SQLException {
 
-        Connection c = DriverManager.getConnection("jdbc:mysql://localhost/banco", "root", "123");
+        Connection c = new ConnectionFactory().getConnection();
 
         PreparedStatement ps = c.prepareStatement("select * from tabela");
         // ...
